@@ -11,7 +11,11 @@ int main() {
 
     int numerosecreto = 42;
 
-    printf("\nPressione qualquer tecla para encerrar\n");
-    getchar();
+    int chute;
+
+    printf("\nQual é o seu chute? ");
+    scanf("%d", &chute);
+    printf("\n\nO seu chute foi: %d\n", chute);
+
     return 0;
 }
