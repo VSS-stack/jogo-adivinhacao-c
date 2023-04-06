@@ -5,7 +5,7 @@
 int main() {
     //imprime o cabeçalho do jogo
     setlocale(LC_ALL, "portuguese");
-    printf("*******************************************\n");
+    printf("\n*******************************************\n");
     printf("* Bem-vindo ao nosso jogo de adivinhação! *\n");
     printf("*******************************************\n");
 
@@ -15,7 +15,17 @@ int main() {
 
     printf("\nQual é o seu chute? ");
     scanf("%d", &chute);
-    printf("\n\nO seu chute foi: %d\n", chute);
+    printf("\nO seu chute foi: %d\n\n", chute);
+
+    if(chute == numerosecreto) {
+        printf("Parabéns! Você acertou!\n");
+    }
+    else if(chute > numerosecreto) {
+        printf("Seu chute foi maior que o número secreto.\n\n");
+    }
+    else if(chute < numerosecreto) {
+        printf("Seu chute foi menor que o número secreto.\n\n");
+    }
 
     return 0;
 }
