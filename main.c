@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
+
+#define NUMERO_TENTATIVAS 5 //Declarando constante
 
 int main() {
     //imprime o cabeçalho do jogo
@@ -12,8 +13,8 @@ int main() {
     int numerosecreto = 42;
     int chute;
 
-    for(int i = 1; i<=3; i++){
-        printf("\nTentativa %d de 3\n", i);
+    for(int i = 1; i <= NUMERO_TENTATIVAS; i++){
+        printf("\nTentativa %d de %d\n", i, NUMERO_TENTATIVAS);
         printf("\nQual é o seu chute? ");
         scanf("%d", &chute);
         printf("\nO seu chute foi: %d\n\n", chute);
@@ -23,6 +24,7 @@ int main() {
         if(acertou) {
             printf("Parabéns! Você acertou!\n\n");
             printf("*******************************************\n");
+
             break;
         }else {
             int maior = chute > numerosecreto;
